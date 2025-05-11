@@ -2,6 +2,11 @@
 
 A comprehensive data analysis project exploring global cancer statistics, with a focus on understanding the impact of environmental, genetic, and behavioral factors on cancer severity and treatment costs, as well as computing incidence rates across different countries.
 
+![Dashboard (Power BI)](progect%202/2025-05-11.png)
+
+
+
+
 1-Project Overview:
 
 This project involves analyzing a dataset from Kaggle containing patient-level cancer data from various countries. The analysis includes data preprocessing, feature engineering, exploratory data analysis (EDA), and visualization to extract meaningful insights and patterns.
