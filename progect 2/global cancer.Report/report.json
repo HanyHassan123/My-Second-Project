@@ -1,0 +1,105 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "a82d53dc5d7034b98e02",
+      "config": "{}",
+      "name": "af89e68da9a4041012d4",
+      "parameters": "[{\"name\":\"ef9cdee460e371da0e52\",\"boundFilter\":\"addea68862045ddab8ab\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Country_Region\"}},\"asAggregation\":true}]",
+      "type": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"addea68862045ddab8ab\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Country_Region\"}},\"type\":\"Categorical\",\"howCreated\":5,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "a82d53dc5d7034b98e02",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0a84347bd11b12a085a2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":4}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"33a8ee3b055aa627dd87\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":343.9396525871416,\"z\":5,\"width\":763.4704376110176,\"height\":376.0658838727537,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Tooltips\":[{\"queryRef\":\"Sum(global_cancer_patients_2015_2024.Rate)\"},{\"queryRef\":\"Sum(global_cancer_patients_2015_2024.Population)\"}],\"Y\":[{\"queryRef\":\"Sum(global_cancer_patients_2015_2024.Cases)\"}],\"Category\":[{\"queryRef\":\"global_cancer_patients_2015_2024.Country_Region\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"global_cancer_patients_2015_2024\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Rate\"}},\"Function\":0},\"Name\":\"Sum(global_cancer_patients_2015_2024.Rate)\",\"NativeReferenceName\":\"Sum of Rate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Population\"}},\"Function\":0},\"Name\":\"Sum(global_cancer_patients_2015_2024.Population)\",\"NativeReferenceName\":\"Sum of Population\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cases\"}},\"Function\":0},\"Name\":\"Sum(global_cancer_patients_2015_2024.Cases)\",\"NativeReferenceName\":\"Cases\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Country_Region\"},\"Name\":\"global_cancer_patients_2015_2024.Country_Region\",\"NativeReferenceName\":\"Count of Country_Region\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cases\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"titleBold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"titleFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"titleBold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Rate\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#00F729'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"46D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 376.07,
+          "width": 763.47,
+          "x": 9.45,
+          "y": 343.94,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"5ff9ead9b695b5da5c00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":342.04987427622325,\"y\":0,\"z\":6,\"width\":298.58497312510093,\"height\":279.68719001591734,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(global_cancer_patients_2015_2024.Cancer_Type)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"global_cancer_patients_2015_2024\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cancer_Type\"}},\"Function\":2},\"Name\":\"Min(global_cancer_patients_2015_2024.Cancer_Type)\",\"NativeReferenceName\":\"Count of Cancer_Type\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cancer_Type\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"47D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0.6}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"29D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 279.69,
+          "width": 298.58,
+          "x": 342.05,
+          "y": 0.00,
+          "z": 6.00
+        },
+        {
+          "config": "{\"name\":\"845f7d542ceb148dd28b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":795.5966688966297,\"y\":343.9396525871416,\"z\":2,\"width\":470.55479941867173,\"height\":376.0658838727537,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(global_cancer_patients_2015_2024.Cases)\"}],\"Category\":[{\"queryRef\":\"global_cancer_patients_2015_2024.Cancer_Type\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"Min(global_cancer_patients_2015_2024.Gender)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"global_cancer_patients_2015_2024\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cases\"}},\"Function\":0},\"Name\":\"Sum(global_cancer_patients_2015_2024.Cases)\",\"NativeReferenceName\":\"Sum of Cases\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cancer_Type\"},\"Name\":\"global_cancer_patients_2015_2024.Cancer_Type\",\"NativeReferenceName\":\"Cancer_Type\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Gender\"}},\"Function\":3},\"Name\":\"Min(global_cancer_patients_2015_2024.Gender)\",\"NativeReferenceName\":\"First Gender\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cases\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}},{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"legend\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00F414'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Colon'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FB0000'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Lung'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#0080F6'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Prostate'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F94C00'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Leukemia'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#DD00FF'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Liver'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF00A2'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Skin'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#5000F4'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Cervical'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FDD000'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"global_cancer_patients_2015_2024\"}},\"Property\":\"Cancer_Type\"}},\"Right\":{\"Literal\":{\"Value\":\"'Breast'\"}}}}}]}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 376.07,
+          "width": 470.55,
+          "x": 795.60,
+          "y": 343.94,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"98eaa0e825613871d2d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":808.8251170730583,\"y\":0,\"z\":1,\"width\":470.55479941867173,\"height\":317.4827562342846,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"global_cancer_patients_2015_2024.Country_Region\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(global_cancer_patients_2015_2024.Cases)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"global_cancer_patients_2015_2024\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Country_Region\"},\"Name\":\"global_cancer_patients_2015_2024.Country_Region\",\"NativeReferenceName\":\"Country_Region\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cases\"}},\"Function\":0},\"Name\":\"Sum(global_cancer_patients_2015_2024.Cases)\",\"NativeReferenceName\":\"Sum of Cases\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 317.48,
+          "width": 470.55,
+          "x": 808.83,
+          "y": 0.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"d906df90089daec958b8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.448891554591802,\"y\":0,\"z\":0,\"width\":296.69519481418257,\"height\":279.68719001591734,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(global_cancer_patients_2015_2024.Cases)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"global_cancer_patients_2015_2024\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cases\"}},\"Function\":0},\"Name\":\"Sum(global_cancer_patients_2015_2024.Cases)\",\"NativeReferenceName\":\"Sum of Cases\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Cases\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"46D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryLabels\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0.6}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"29D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 279.69,
+          "width": 296.70,
+          "x": 9.45,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e26bf6e06420c200b40c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":676.5406353087731,\"y\":0,\"z\":3,\"width\":119.0560335878567,\"height\":304.254308057856,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"global_cancer_patients_2015_2024.Country_Region\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"global_cancer_patients_2015_2024\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Country_Region\"},\"Name\":\"global_cancer_patients_2015_2024.Country_Region\",\"NativeReferenceName\":\"Country_Region\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"111.55911177655088D\"}}}},\"selector\":{\"metadata\":\"global_cancer_patients_2015_2024.Country_Region\"}}],\"grid\":[{\"properties\":{}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'BoldHeaderFlashyRows'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"24D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 304.25,
+          "width": 119.06,
+          "x": 676.54,
+          "y": 0.00,
+          "z": 3.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

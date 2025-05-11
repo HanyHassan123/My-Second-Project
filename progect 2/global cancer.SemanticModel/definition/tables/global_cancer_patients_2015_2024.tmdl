@@ -1,0 +1,190 @@
+table global_cancer_patients_2015_2024
+	lineageTag: 0d1b009a-b2a6-4773-a340-59d2c78c4d8e
+
+	column Column1
+		dataType: int64
+		formatString: 0
+		lineageTag: 3828c67f-f740-4db1-ada5-53713b1dddca
+		summarizeBy: sum
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Patient_ID
+		dataType: string
+		lineageTag: 750d25c3-36ca-444a-a037-bcedba16d8d6
+		summarizeBy: none
+		sourceColumn: Patient_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 18f660f8-1207-4b3a-958c-112267c7afe9
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 9141b05f-ee17-404b-9e07-fca0abc207ab
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country_Region
+		dataType: string
+		lineageTag: 15eedd82-ef7c-4d87-aa54-afc73ae38389
+		summarizeBy: none
+		sourceColumn: Country_Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9489c326-b0c7-4db7-bc90-bbfc8e35becf
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Genetic_Risk
+		dataType: double
+		lineageTag: f3d316b2-92f7-439f-ab6f-a3dfd3c6b8f1
+		summarizeBy: sum
+		sourceColumn: Genetic_Risk
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Air_Pollution
+		dataType: double
+		lineageTag: 572fed49-bad0-4933-b4ef-84a0cc0cd77d
+		summarizeBy: sum
+		sourceColumn: Air_Pollution
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Alcohol_Use
+		dataType: double
+		lineageTag: c3c04da5-b2c7-458b-8cf9-402d61113995
+		summarizeBy: sum
+		sourceColumn: Alcohol_Use
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Smoking
+		dataType: double
+		lineageTag: 80f29084-b426-4aa8-b45f-570f4b1dfd68
+		summarizeBy: sum
+		sourceColumn: Smoking
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Obesity_Level
+		dataType: double
+		lineageTag: 28983d26-1d35-45b5-bd7f-a45845c279d5
+		summarizeBy: sum
+		sourceColumn: Obesity_Level
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Cancer_Type
+		dataType: string
+		lineageTag: 3868b49e-8552-41db-8f35-f786b165da9f
+		summarizeBy: none
+		sourceColumn: Cancer_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cancer_Stage
+		dataType: string
+		lineageTag: 140e55e9-534e-4908-9812-d2debad5a8d5
+		summarizeBy: none
+		sourceColumn: Cancer_Stage
+
+		annotation SummarizationSetBy = Automatic
+
+	column Treatment_Cost_USD
+		dataType: double
+		lineageTag: 0fc5d93f-80ec-41f3-80c5-17bb706ed719
+		summarizeBy: sum
+		sourceColumn: Treatment_Cost_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Survival_Years
+		dataType: double
+		lineageTag: a6d39da0-fef5-4300-a945-8b4000b40394
+		summarizeBy: sum
+		sourceColumn: Survival_Years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Target_Severity_Score
+		dataType: double
+		lineageTag: 60873a21-e48d-4f6c-877f-689d3aa649f5
+		summarizeBy: sum
+		sourceColumn: Target_Severity_Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Cases
+		dataType: int64
+		formatString: 0
+		lineageTag: b9698f84-cddd-4316-a663-0b60dc9bd2e0
+		summarizeBy: sum
+		sourceColumn: Cases
+
+		annotation SummarizationSetBy = Automatic
+
+	column Population
+		dataType: int64
+		formatString: 0
+		lineageTag: 58979bdc-3b92-4bb3-8d2c-5c961bf7fd6e
+		summarizeBy: sum
+		sourceColumn: Population
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rate
+		dataType: double
+		lineageTag: 4e204931-a7df-457f-b546-f00e55ec871b
+		summarizeBy: sum
+		sourceColumn: Rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition global_cancer_patients_2015_2024 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\My Fills\For course\progect 2\global_cancer_patients_2015_2024.csv"),[Delimiter=",", Columns=19, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"Patient_ID", type text}, {"Age", Int64.Type}, {"Gender", type text}, {"Country_Region", type text}, {"Year", Int64.Type}, {"Genetic_Risk", type number}, {"Air_Pollution", type number}, {"Alcohol_Use", type number}, {"Smoking", type number}, {"Obesity_Level", type number}, {"Cancer_Type", type text}, {"Cancer_Stage", type text}, {"Treatment_Cost_USD", type number}, {"Survival_Years", type number}, {"Target_Severity_Score", type number}, {"Cases", Int64.Type}, {"Population", Int64.Type}, {"Rate", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
