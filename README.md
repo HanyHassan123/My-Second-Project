@@ -98,5 +98,8 @@ Data preprocessing included handling missing values, normalizing formats, and ad
 
 
 Hany Hassan Ahmed
-LinkedIn | Email: alnagarwps@gmail.com
+LinkedIn:
 www.linkedin.com/in/hany-hassan-41690730a
+
+Email: 
+alnagarwps@gmail.com
