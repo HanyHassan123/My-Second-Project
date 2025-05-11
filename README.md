@@ -97,7 +97,7 @@ Country-level incidence rate maps
 Data preprocessing included handling missing values, normalizing formats, and adding calculated fields (cases, population, rate) to enhance analysis.
 
 
-Author
+Author:
 
 Hany Hassan Ahmed
 
