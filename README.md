@@ -4,7 +4,9 @@ A comprehensive data analysis project exploring global cancer statistics, with a
 
 ![Dashboard (Power BI)](progect%202/2025-05-11.png)
 
+[Download Dashboard (Power BI)](progect%202/global%20cancer.pbip)
 
+[Download csv file]()
 
 
 1-Project Overview:
